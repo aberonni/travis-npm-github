@@ -1,0 +1,24 @@
+{
+  "name": "travis-npm-github",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint index.js",
+    "build": "node index.js",
+    "postversion": "git push origin master --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aberonni/travis-npm-github.git"
+  },
+  "author": "Domenico Gemoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aberonni/travis-npm-github/issues"
+  },
+  "homepage": "https://github.com/aberonni/travis-npm-github#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}

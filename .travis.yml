@@ -1,0 +1,24 @@
+language: node_js
+dist: trusty
+node_js:
+  - node
+before_deploy:
+  - npm run build
+deploy:
+  - provider: npm
+    email: domenicogemoli@gmail.com
+    api_key:
+      secure: jG+C5q5Gt0Rb8gtJDB3OXVAubtdNSz0Bu/T4w9pwYTf332BeneP3giFhw8b2NfJzSSqVWH+E5oF1h5ijD7FRCuxRUBdYbvoc6XFzmKKUiM7nuKgMStliAVE0zSCBhlbsKR05OXKwu128OKB4wxqJe6Euve23yzVF2lybfQFZNIv/kA1qpHtXU04QiY0faAATyWtCg9nFbO4ypBEnDOeIY5/V2kt1P3V+OiYK3BbVBb0vTFtoHyb3sxe+jcdrFpikNW3KuDR8yNazB8yI+WNdZeROfs4BdI+17pzbFhitRWyjhsisl0QtaSkt7p9B2RCatwMcP4FC6PeMky0ByDMQVTbQKwztFv48GfI/HHYr231K9KpZxk+mr/GrxfwfkAGlhpaLPSDY9gk5+uls/mNJJJGkLv6I640Zrv6OKE/1VqbW4X8Hk9564cHa1pTcryOrJlCryvu+CyZgp4xskL/imPYi1er+uz1E3Fz5yUUp5lFfTTPtOxhc1wo5zY6MjEnqzrouq3BVtmK7kYVTyvNSScyX4Gs9Hbk5hrTed4Pk8CAppe4n0+y3CPN6bE085j5PgJbsvgzD0UYangxOlRaIk0whySNOvxCPsgrxGdf0jxjHVeBLRu7cryl1m7s5d43Y39HDQ7jo/nyprW64TXV6YXBeB29StlWRia6viZAz/hI=
+    skip_cleanup: true
+    on:
+      tags: true
+      repo: aberonni/travis-npm-github
+  - provider: releases
+    api_key:
+      secure: 1G4i+o2aBSVVVNE3wui0qVGSFOCJR935sajKNXQM5d9p7JdRoSwVMvzFcC321Sn5NuCdwyaPzhX1C6BbD54wjP9Yav5Pbvyj7mp+/phq4AK86yo5mwlpLndvy2oH1D6SwfitF8N0iV0psft5THWv6P67MP0SlMU47lDFAJG9F95jR4OJrGPkijuBJR0WpozRT4UB3rwf9eJMDg9Auxg+hhDflSHNIlobv4l0NGwKp1sfwv3Dv9MGfqay4EJk+B2xkPC4a1sTCXz03W23xBoK8iJJw6lsylHyca+07ADowQHuf2lLoe/gtF5aKDZtcftZP7PFVI9qzmPGkkzCpP4i/QZ16XQhSR5QrhyvzUEWvm4W25+gFeMG68at6Uz/hUHx/KiIdZFFg8dZETqVgDSRSjRYZRJb91LgziYC3GDYybFuAkB/mqdezzX2sR9F1vz41GGkNWa0IcDa/aiJJB3IX1SKvHCD5fY1JZhf6WCNFsfAwIDxYu77IZbWcMnYwnzO/k0RM5KFhea90gMgWSXILwXjQFBjwGJaZkt3leA9H2JVGdqQt9rTNbJ1LuXzQ+/UM+hnM3eHY8t959mBu069Tc21AYFiUK5GWXvvGyQXNRBUEVPHhT5dB0m6I36kDaGfB64D49Efx3a43RbLyeJ3W3uMAW5VhKRXazH1bT/zyrg=
+    file:
+      - hello.txt
+    skip_cleanup: true
+    on:
+      tags: true
+      repo: aberonni/travis-npm-github
