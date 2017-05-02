@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-- 'node'
+- node
+deploy:
+  provider: npm
+  email: domenicogemoli@gmail.com
+  api_key:
+    secure: jG+C5q5Gt0Rb8gtJDB3OXVAubtdNSz0Bu/T4w9pwYTf332BeneP3giFhw8b2NfJzSSqVWH+E5oF1h5ijD7FRCuxRUBdYbvoc6XFzmKKUiM7nuKgMStliAVE0zSCBhlbsKR05OXKwu128OKB4wxqJe6Euve23yzVF2lybfQFZNIv/kA1qpHtXU04QiY0faAATyWtCg9nFbO4ypBEnDOeIY5/V2kt1P3V+OiYK3BbVBb0vTFtoHyb3sxe+jcdrFpikNW3KuDR8yNazB8yI+WNdZeROfs4BdI+17pzbFhitRWyjhsisl0QtaSkt7p9B2RCatwMcP4FC6PeMky0ByDMQVTbQKwztFv48GfI/HHYr231K9KpZxk+mr/GrxfwfkAGlhpaLPSDY9gk5+uls/mNJJJGkLv6I640Zrv6OKE/1VqbW4X8Hk9564cHa1pTcryOrJlCryvu+CyZgp4xskL/imPYi1er+uz1E3Fz5yUUp5lFfTTPtOxhc1wo5zY6MjEnqzrouq3BVtmK7kYVTyvNSScyX4Gs9Hbk5hrTed4Pk8CAppe4n0+y3CPN6bE085j5PgJbsvgzD0UYangxOlRaIk0whySNOvxCPsgrxGdf0jxjHVeBLRu7cryl1m7s5d43Y39HDQ7jo/nyprW64TXV6YXBeB29StlWRia6viZAz/hI=
+  on:
+    tags: true
+    repo: aberonni/travis-npm-github
